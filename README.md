@@ -1,6 +1,5 @@
 # Ecommerce-for-AMB-imports
 
-
 >V1 Ecommerce website.
 
 ### Features
@@ -14,6 +13,7 @@
 ###Images
 
 Screenshot:
+
 Home Page:
 
 ![](https://github.com/Tibebetad/Ecommerce-for-AMB-imports/blob/main/ss/1.jpg?raw=true)
