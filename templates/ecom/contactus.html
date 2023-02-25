@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+  <title> AMB IMPORTS </title>
+  {% load static %}
+  {% block content %}
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css" /> -->
+
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- nice select  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+    integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ=="
+    crossorigin="anonymous" />
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}" />
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" />
+
+  <style>
+    body {
+      background: -webkit-linear-gradient(left, #785F5A, #B18676, #785F5A);
+    }
+
+    .contact-form {
+      background: #fff;
+      margin-top: 7%;
+      margin-bottom: 5%;
+      border-radius: 1rem;
+      width: 70%;
+    }
+
+    .contact-form .form-control {
+      border-radius: 1rem;
+    }
+
+    .contact-image {
+      text-align: center;
+    }
+
+    .contact-image img {
+      border-radius: 6rem;
+      width: 11%;
+      margin-top: -3%;
+      transform: rotate(29deg);
+    }
+
+    .contact-form form {
+      padding: 14%;
+    }
+
+    .contact-form form .row {
+      margin-bottom: -7%;
+    }
+
+    .contact-form h3 {
+      margin-bottom: 8%;
+      margin-top: -10%;
+      text-align: center;
+      color: #0062cc;
+    }
+
+    .contact-form .btnContact {
+      width: 50%;
+      border: none;
+      border-radius: 1rem;
+      padding: 1.5%;
+      background: #dc3545;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .btnContactSubmit {
+      width: 50%;
+      border-radius: 1rem;
+      padding: 1.5%;
+      color: #fff;
+      background-color: #0062cc;
+      border: none;
+      cursor: pointer;
+    }
+
+
+
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    *,
+    *:after,
+    *:before {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+      display: table;
+      content: '';
+    }
+
+    .clearfix:after {
+      clear: both;
+    }
+
+
+    body {
+      background: #ffffff;
+      color: #333;
+      font-weight: normal;
+      font-size: 1em;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+
+    input:focus,
+    textarea:focus,
+    keygen:focus,
+    select:focus {
+      outline: none;
+    }
+
+    ::-moz-placeholder {
+      color: #666;
+      font-weight: 300;
+      opacity: 1;
+    }
+
+    ::-webkit-input-placeholder {
+      color: #666;
+      font-weight: 300;
+    }
+
+
+    /* Contact Form Styling */
+    .container {
+      padding: 0 5px 7px;
+    }
+
+    .textcenter {
+      text-align: center;
+    }
+
+    .section1 {
+      text-align: center;
+      display: table;
+      width: 100%;
+    }
+
+    .section1 .shtext {
+      display: block;
+      margin-top: 20px;
+    }
+
+    .section1 .seperator {
+      border-bottom: 1px solid #a2a2a2;
+      width: 35px;
+      display: inline-block;
+      margin: 20px;
+    }
+
+    .section1 h1 {
+      font-size: 40px;
+      color: #ffffff;
+      font-weight: normal;
+    }
+
+    .section2 {
+      width: 1200px;
+      margin: 25px auto;
+    }
+
+    .section2 .col2 {
+      width: 48.71%;
+    }
+
+    .section2 .col2.first {
+      float: left;
+    }
+
+    .section2 .col2.last {
+      float: right;
+    }
+
+    .section2 .col2.column2 {
+      padding: 0 30px;
+    }
+
+    .section2 span.collig {
+      color: #a2a2a2;
+      margin-right: 10px;
+      display: inline-block;
+    }
+
+    .section2 .sec2addr {
+      display: block;
+      line-height: 26px;
+    }
+
+    .section2 .sec2addr p:first-child {
+      margin-bottom: 10px;
+    }
+
+    .section2 .sec2contactform input[type="text"],
+    .section2 .sec2contactform input[type="email"],
+    .section2 .sec2contactform textarea {
+      padding: 18px;
+      border: 0;
+      background: #EDEDED;
+      margin: 7px 0;
+    }
+
+    .section2 .sec2contactform textarea {
+      width: 100%;
+      display: block;
+      color: #666;
+      resize: none;
+    }
+
+    .section2 .sec2contactform input[type="submit"] {
+      padding: 15px 40px;
+      color: #fff;
+      border: 0;
+      background: #A44DD8;
+      font-size: 16px;
+      text-transform: uppercase;
+      margin: 7px 0;
+      cursor: pointer;
+    }
+
+    .section2 .sec2contactform h3 {
+      font-weight: normal;
+      margin: 20px 0;
+      margin-top: 30px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 19px;
+      color: #fefdff;
+    }
+
+    /* @media querries */
+
+    @media only screen and (max-width: 1266px) {
+      .section2 {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (max-width: 960px) {
+      .container {
+        padding: 0 15px 30px;
+      }
+
+      .section2 .col2 {
+        width: 100%;
+        display: block;
+      }
+
+      .section2 .col2.first {
+        margin-bottom: 10px;
+      }
+
+      .section2 .col2.column2 {
+        padding: 0;
+      }
+
+      body .sec2map {
+        height: 250px !important;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      .section2 .sec2addr {
+        font-size: 14px;
+      }
+
+      .section2 .sec2contactform h3 {
+        font-size: 16px;
+      }
+
+      .section2 .sec2contactform input[type="text"],
+      .section2 .sec2contactform input[type="email"],
+      .section2 .sec2contactform textarea {
+        padding: 10px;
+        margin: 3px 0;
+      }
+
+      .section2 .sec2contactform input[type="submit"] {
+        padding: 10px 30px;
+        font-size: 14px;
+      }
+    }
+
+    @media only screen and (max-width: 420px) {
+      .section1 h1 {
+        font-size: 28px;
+      }
+    }
+
+
+
+
+    @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(90deg, #0e3959 0%, #0e3959 30%, #03a9f5 30%, #03a9f5 100%);
+    }
+
+    .contactUS {
+      position: relative;
+      width: 100%;
+      padding: 40px 100px;
+    }
+
+    .contactUS .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: wheat;
+      font-size: 2em;
+    }
+
+    .form {
+      grid-area: form;
+    }
+
+    .info {
+      grid-area: info;
+    }
+
+    .map {
+      grid-area: map;
+    }
+
+    .contact {
+      padding: 40px;
+      background: white;
+      box-shadow: 0 5px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    .box {
+      position: relative;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: 5fr 4fr;
+      grid-template-areas:
+        "form info"
+        "form map";
+      /*gap*/
+      grid-gap: 20px;
+      margin-top: 20px;
+    }
+
+    .contact h3 {
+      color: #0e3959;
+      font-weight: 500;
+      font-size: 1.4em;
+      margin-bottom: 10px;
+    }
+
+    /*form*/
+    .formBox {
+      position: relative;
+      width: 100%;
+    }
+
+    .formBox .row50 {
+      display: flex;
+      gap: 20px;
+    }
+
+    .inputBox {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    .formBox .row100 inputBox {
+      width: 100%;
+    }
+
+    .inputBox span {
+      color: #18b7ff;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    .inputBox input {
+      padding: 10px;
+      font-size: 1.1em;
+      outline: none;
+      border: 1px solid #333;
+    }
+
+    .inputBox textarea {
+      padding: 10px;
+      font-size: 1.1em;
+      outline: none;
+      border: 1px solid #333;
+      resize: none;
+      min-height: 120px;
+      margin-bottom: 10px;
+    }
+
+    .inputBox input[type="submit"] {
+      background: crimson;
+      color: #fff;
+      border: none;
+      font-size: 1.1em;
+      max-width: 120px;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 14px 15px;
+    }
+
+    .inputBox ::placeholder {
+      color: #999;
+    }
+
+    /*info*/
+    .info {
+      background: #0e3959;
+    }
+
+    .info h3 {
+      color: whitesmoke;
+    }
+
+    .info .infoBox div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .info .infoBox div span {
+      min-width: 40px;
+      height: 40px;
+      color: fff;
+      background: #18b7ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5em;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    .info .infoBox div p {
+      color: #fff;
+      font-size: 1.1em;
+    }
+
+    .info .infoBox div a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+
+    /*social media*/
+    .sci {
+      margin-top: 40px;
+      display: flex;
+    }
+
+    .sci li {
+      list-style: none;
+      margin-right: 15px;
+    }
+
+    .sci li a {
+      color: #fff;
+      font-size: 2em;
+      color: #ccc;
+    }
+
+    .sci li a:hover {
+      color: #fff;
+      transition: 0.9s;
+    }
+
+    /*map*/
+    .map {
+      padding: 0;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    /*resposive design*/
+    @media(max-width:991px) {
+      body {
+        background: #03a9f5;
+      }
+
+      .contactUS {
+        padding: 20px;
+      }
+
+      .box {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+          "form"
+          "info"
+          "map";
+      }
+
+      .map {
+        min-height: 300px;
+      }
+
+      .formBox .row50 {
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+
+      }
+
+      .inputBox {
+        width: 100%;
+      }
+
+      .contact {
+        padding: 30px;
+      }
+
+      .map {
+        min-height: 300px;
+        padding: 0;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="hero_area">
+    <!-- <div class="bg-boxp">
+      <img src="images/tesla.jpeg" alt="">
+    </div> -->
+    <!-- header section strats -->
+    <header class="header_section bg-dark">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="/">
+
+            <h1 class="aq"> AMB <span class="co2"> IMPORTS</span></h1>
+
+
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mx-auto ">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/customer-home">Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contactus">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/aboutus">About <span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+            <div class="user_option">
+
+              {%if request.user.is_authenticated%}
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle bg-dark" type="button" id="dropdownMenuButton"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="{% static 'images/userico.png' %}" alt="My image" width="20px" height="20px">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="edit-profile">Profile</a>
+                  <a class="dropdown-item" href="logout">Logout</a>
+                </div>
+              </div>
+
+              {%else%}
+              
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle bg-dark" type="button" id="dropdownMenuButton"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="{% static 'images/userico.png' %}" alt="My image" width="20px" height="20px">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="customerlogin">signin</a>
+                  <a class="dropdown-item" href="customersignup">signup</a>
+                </div>
+              </div>
+              {%endif%}
+              
+
+              <a class="cart_link" href="/cart">
+                <img src="{% static 'images/cart.png' %}" alt="My image" width="20px" height="20px">
+                <span class="item-number ">{{ product_count_in_cart }}</span>
+              </a>
+              <form class="d-flex input-group w-auto">
+                <input type="search" class="form-control" placeholder="search" aria-label="Search" />
+                <button class="btn btn-outline-primary" type="button" data-mdb-ripple-color="dark">
+                  Search
+                </button>
+              </form>
+
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+
+        <div class="contactUS">
+          <div class="title">
+            <h2>GET IN TOUCH</h2>
+          </div>
+          <div class="box">
+            <div class="contact form">
+              <!--form-->
+              <h3>Send Messages</h3>
+              <form>
+                <div class="formBox">
+                  <div class="row50">
+                    <div class="inputBox">
+                      <span>First Name</span>
+                      <input type="text" placeholder="First name">
+                    </div>
+                    <div class="inputBox">
+                      <span>Last Name</span>
+                      <input type="text" placeholder="Last name">
+                    </div>
+                  </div>
+
+                  <div class="row50">
+                    <div class="inputBox">
+                      <span>Email</span>
+                      <input type="text" placeholder="email address">
+                    </div>
+                    <div class="inputBox">
+                      <span>Phone</span>
+                      <input type="text" placeholder="mobile number">
+                    </div>
+                  </div>
+
+                  <div class="row100">
+                    <div class="inputBox">
+                      <span>Message</span>
+                      <textarea placeholder="write your message here..."></textarea>
+                    </div>
+                  </div>
+
+                  <div class="row100">
+                    <div class="inputBox">
+                      <input type="submit" value="Send">
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!--info box-->
+            <div class="contact info">
+              <h3>Contact Info</h3>
+              <div class="infoBox">
+                <div>
+                  <span><i class="fa-solid fa-location-dot"></i></span>
+                  <p>.....</p>
+                </div>
+                <div>
+                  <span><i class="fa-solid fa-envelope"></i></span>
+                  <a href="mailto:ambspareparts@gmail.com">ambspareparts@gmail.com</a>
+                </div>
+                <div>
+                  <span><i class="fa-solid fa-phone"></i></span>
+                  <a href="tel:+2519 4567 8905">+2519 4567 8905</a>
+                </div>
+                <!--social mdia -->
+                <ul class="sci">
+                  <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fab fa-telegram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!--map box-->
+            <div class="contact map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126146.397423446!2d38.72149654560545!3d8.872617804061742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cef5ab402d%3A0x8467b6b037a24d49!2sAddis%20Ababa!5e0!3m2!1sen!2set!4v1660711774464!5m2!1sen!2set"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@S.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- <div class="container contact-form">
+        
+          <form method="post">
+              <h3>Send Us a Message</h3>
+             <div class="row">
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value="" />
+                      </div>
+                      <div class="form-group">
+                          <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *" value="" />
+                      </div>
+                      <div class="form-group">
+                          <input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number *" value="" />
+                      </div>
+                      <div class="form-group">
+                          <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <textarea name="txtMsg" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+                      </div>
+                  </div>
+              </div>
+          </form>
+  </div> -->
+
+
+
+      <!-- <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      AMB
+                    </h1>
+                    <h2>
+                      IMPORTS
+                    </h2>
+                    <p>
+                      AMB importer is involved in importing, relating, wholesales, department stores, distributes on the
+                      Auto spare parts, chemicals, metals and petroleum products.
+                    <div class="btn-box">
+                      <a href="" class="btn1">
+                        Order Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      LAMPS & LIGHTS
+                    </h1>
+                    <h3>
+                      MEGA SALE
+                    </h3>
+                    <p>
+                      Choose Underground Lighting for buying premium-quality automotive lighting products, LED headlight
+                      bulbs, car lighting accessories, and more at affordable prices. </p>
+                    <div class="btn-box">
+                      <a href="" class="btn1">
+                        Order Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      BODY PARTS
+                    </h1>
+                    <h3>
+                      FOR ANY VEHICLE
+                    </h3>
+                    <p>
+                      The car body is the external layer of the vehicle. It shapes the chassis and platform. Therefore,
+                      it is the car body structure which creates the cabin. Besides, it allows vehicles, having the same
+                      chassis and platform, to have different specific aesthetics and functionalities.
+                    </p>
+                    <div class="btn-box">
+                      <a href="" class="btn1">
+                        Order Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      <!-- <div class="container">
+          <ol class="carousel-indicators">
+            <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+            <li data-target="#customCarousel1" data-slide-to="1"></li>
+            <li data-target="#customCarousel1" data-slide-to="2"></li>
+          </ol>
+        </div> -->
+  </div>
+
+  </section>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 footer-col">
+          <div class="footer_contact">
+            <h4>
+              Contact Us
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +251999999999
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  ambimports@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <div class="footer_detail">
+            <a href="" class="footer-logo">
+              SOCIAL MIDEA
+            </a>
+
+            <div class="footer_social">
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-pinterest" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <h4>
+            Opening Hours
+          </h4>
+          <p>
+            Everyday
+          </p>
+          <p>
+            08.00 AM -07.00 PM
+          </p>
+        </div>
+      </div>
+      <div class="footer-info">
+        <p>
+          &copy; <span id="displayYear"></span> All Rights Reserved By
+          <a href="https://html.design/">AMB IMPORTS</a><br><br>
+          &copy; <span id="displayYear"></span> Distributed By
+          <a href="https://themewagon.com/" target="_blank">AMB</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+
+
+
+  <!-- jQery -->
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+  <!-- bootstrap js -->
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- isotope js -->
+  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <!-- custom js -->
+  <script src="{% static 'js/custom.js' %}"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+  {% endblock content %}
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="images/favicon.png" type="">
+
+    <title> AMB IMPORTS </title>
+    {% load static %}
+    {% block content %}
+
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css" /> -->
+
+
+    <!--owl slider stylesheet -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- nice select  -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}" />
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" />
+
+    <!-- font awesome style -->
+    <!-- <link href="css/font-awesome.min.css" rel="stylesheet" /> -->
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="css/style.css" rel="stylesheet" /> -->
+    <!-- responsive style -->
+    <!-- <link href="css/responsive.css" rel="stylesheet" /> -->
+
+    <style>
+        /*Footer*/
+        .footer {
+            background: black;
+            color: whitesmoke;
+            height: 400px;
+            position: relative;
+        }
+
+        .footer .footer-content {
+            height: 350px;
+            display: flex;
+        }
+
+        .footer .footer-content .footer-section {
+            flex: 1px;
+            padding: 25px;
+        }
+
+        .footer .footer-content h1,
+        .footer .footer-content h2 {
+            color: white;
+        }
+
+        .footer .footer-content .about h1 span {
+            color: turquoise;
+        }
+
+        .footer .footer-content .about .contact span {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+
+        .footer .footer-content .about .socials a {
+            width: 45px;
+            height: 41px;
+            padding-top: 5px;
+            margin-right: 5px;
+            text-align: center;
+            display: inline;
+            font-size: 1.3em;
+            border-radius: 5px;
+            transition: all .2s;
+            color: white;
+        }
+
+        .footer .footer-content .about .socials a :hover {
+            border: 1px solid white;
+            color: white;
+            transition: all .2s;
+        }
+
+        .footer .footer-content .links ul a {
+            display: block;
+            margin-bottom: 10px;
+            font-language-override: 1.2em;
+            color: white;
+            list-style: none;
+            text-decoration: none;
+            transition: .2s;
+        }
+
+        .footer .footer-content .links ul a:hover {
+            margin-left: 15px;
+            transition: all .3s;
+        }
+
+        .footer .footer-content .contact-form .contact-input {
+            background-origin: #272727;
+            color: black;
+            margin-bottom: 10px;
+            /*line-height: 1.5em;*/
+            padding: .7rem 3rem;
+            height: 100px;
+            border: none;
+            text-align: justify;
+            background: whitesmoke;
+        }
+
+        .footer .footer-content .contact-form .contact-input:focus {
+            background: lightblue;
+        }
+
+        .footer .footer-content .contact-form .contact-btn {
+            float: left;
+        }
+
+        /*email button*/
+        /* .btn{
+    padding: .5rem 1rem;
+    background: turquoise;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+} */
+        .btn:hover {
+            color: white !important;
+            background: gray;
+        }
+
+        .btn-big {
+            padding: .7rem 1.3rem;
+            line-height: 1.3rem;
+        }
+
+        .footer .footer-bottom {
+            background: tomato;
+            color: white;
+            height: 40px;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            padding-top: 20px;
+        }
+        .ppp{
+            padding-top: 90px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="hero_aea">
+        
+        <!-- header section strats -->
+        <header class="header_section bg-dark">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg custom_nav-container ">
+                    <a class="navbar-brand" href="/">
+
+                        <h1 class="aq"> AMB <span class="co2"> IMPORTS</span></h1>
+
+
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class=""> </span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav  mx-auto ">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/customer-home">Product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contactus">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/aboutus">About</a>
+                            </li>
+                        </ul>
+                        <div class="user_option">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle bg-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <img src="{% static 'images/userico.png' %}" alt="My image"width="20px" height="20px">
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="customerlogin">signin</a>
+                                  <a class="dropdown-item" href="customersignup">signup</a>
+                                </div>
+                              </div>
+                                
+                                <a class="cart_link" href="/cart">
+                                    <img src="{% static 'images/cart.png' %}" alt="My image"width="20px" height="20px">
+                                    <span class="item-number ">{{ product_count_in_cart }}</span>
+                                </a>
+                           
+                            <form class="d-flex input-group w-auto" action="/search" method="get">
+                                <input type="search" method="get" type="search" class="form-control"
+                                    placeholder="search" aria-label="Search" name="query" id="query" />
+                                <button class="btn btn-outline-primary" type="submit" data-mdb-ripple-color="dark">
+                                    Search
+                                </button>
+                            </form>
+
+                            <!-- <form  action="/search" method="get">
+                                <div class="row"> 
+                                    <input class="navbar-input col-xs-11" type="search" placeholder="Search for Products, Brands and more" name="query" id="query">
+                                  <button class="navbar-button col-xs-1" type="submit">
+                                    <svg width="15px" height="15px">
+                                            <path d="M11.618 9.897l4.224 4.212c.092.09.1.23.02.312l-1.464 1.46c-.08.08-.222.072-.314-.02L9.868 11.66M6.486 10.9c-2.42 0-4.38-1.955-4.38-4.367 0-2.413 1.96-4.37 4.38-4.37s4.38 1.957 4.38 4.37c0 2.412-1.96 4.368-4.38 4.368m0-10.834C2.904.066 0 2.96 0 6.533 0 10.105 2.904 13 6.486 13s6.487-2.895 6.487-6.467c0-3.572-2.905-6.467-6.487-6.467 "></path>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </form> -->
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+
+        
+    </div>
+
+
+
+
+    <section class="ppp">
+        <img src="{% static "images/logout_img.png" %}"  style="width:800px; height:100px; padding-left:400px;">
+
+    </section>
+
+
+
+    <!-- footer section -->
+    <footer class="footer_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-col">
+                    <div class="footer_contact">
+                        <h4>
+                            Contact Us
+                        </h4>
+                        <div class="contact_link_box">
+                            <a href="">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <span>
+                                    Location
+                                </span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span>
+                                    Call +251999999999
+                                </span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <span>
+                                    ambimports@gmail.com
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-col">
+                    <div class="footer_detail">
+                        <a href="" class="footer-logo">
+                            SOCIAL MIDEA
+                        </a>
+
+                        <div class="footer_social">
+                            <a href="">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-pinterest" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-col">
+                    <h4>
+                        Opening Hours
+                    </h4>
+                    <p>
+                        Everyday
+                    </p>
+                    <p>
+                        08.00 AM -07.00 PM
+                    </p>
+                </div>
+            </div>
+            <div class="footer-info">
+                <p>
+                    &copy; <span id="displayYear"></span> All Rights Reserved By
+                    <a href="https://html.design/">AMB IMPORTS</a><br><br>
+                    &copy; <span id="displayYear"></span> Distributed By
+                    <a href="https://themewagon.com/" target="_blank">AMB</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section -->
+
+
+
+    <!-- jQery -->
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <!-- popper js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+    <!-- bootstrap js -->
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <!-- owl slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+    <!-- nice select -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+    <!-- custom js -->
+    <script src="{% static 'js/custom.js' %}"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+    </script>
+    <!-- End Google Map -->
+    {% endblock content %}
+
+
+</body>
+
+</html>
